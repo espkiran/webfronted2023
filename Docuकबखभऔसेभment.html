@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Docuकबखभऔसेभment_files/growmore.css">
+</head>
+<body>
+    <!-- Your HTML code -->
+
+    <form id="save-later-form">
+        <!-- <button type="button" id="save">SAVE</button> -->
+        <div class="container">
+    
+            <div class="items12">
+                <table style="width: 100%">
+                    <tr>
+                        <th style="width: 5%">क्र.सं.</th>
+                        <th>जमानी बस्नेको नाम</th>
+                        <th>ठेगाना</th>
+                        <th>सदस्य नं.</th>
+                        <th>खाता नंं.</th>
+                        <th>माैज्दात रकम</th>
+                        <th>दस्तखत</th>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;">१.</td>
+                      <td><input type="text" name="memo21" id="memo21" /></td>
+                      <td>
+                          <input type="text" name="memo22a" id="memo22a" />जिल्ला,  
+                          <input type="text" name="memo22b" id="memo22b" />
+                          <select name="togapa1" id="togapa1"></select>
+                          <select name="togapa2" id="togapa2"></select> नं. वडा
+                          <input type="text" name="memo22d" id="memo22d" />टोल    
+                      </td>
+                      <td><input type="text" name="memo23" id="memo23" /></td>
+                      <td><input type="text" name="memo24" id="memo24" /></td>
+                      <td><input type="text" name="memo25" id="memo25" /></td>
+                      <td><input type="text" name="memo26" id="memo26" /></td>
+                  </tr>
+                  <tr>
+                      <td style="text-align: center;">२</td>
+                      <td><input type="text" name="memo27" id="memo27" /></td>
+                      <td>
+                          <input type="text" name="memo28a" id="memo28a" />जिल्ला,
+                          <input type="text" name="memo28b" id="memo28b" />
+                          <select name="togapa5" id="togapa5"></select>
+                          <select name="togapa3" id="togapa3"></select>नं. वडा
+                          <input type="text" name="memo28d" id="memo28d" />टोल  
+                      </td>
+                      <td><input type="text" name="memo29" id="memo29" /></td>
+                      <td><input type="text" name="memo30" id="memo30" /></td>
+                      <td><input type="text" name="memo31" id="memo31" /></td>
+                      <td><input type="text" name="memo32" id="memo32" /></td>
+                  </tr>
+                  <tr>
+                      <td style="text-align: center;">३</td>
+                      <td><input type="text" name="memo33" id="memo33" /></td>
+                      <td>
+                          <input type="text" name="memo34a" id="memo34a" />जिल्ला,
+                          <input type="text" name="memo34b" id="memo34b" />
+                          <select name="togapa6" id="togapa6"></select>
+                          <select name="togapa4" id="togapa4"></select> नं. वडा
+                          <input type="text" name="memo34d" id="memo34d" />टोल  
+                      </td>
+                      <td><input type="text" name="memo35" id="memo35" /></td>
+                      <td><input type="text" name="memo36" id="memo36" /></td>
+                      <td><input type="text" name="memo37" id="memo37" /></td>
+                      <td><input type="text" name="memo38" id="memo38" /></td>
+                  </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+    </form>
+
+    <script src="./Docuकबखभऔसेभment_files/jquery.min.js.download"></script>
+    <script src="./Docuकबखभऔसेभment_files/script.js.download"></script>
+
+    <script>
+        // An array of select IDs
+        const selectIdsGroup1 = ["togapa1", "togapa5", "togapa6"];
+        const selectIdsGroup2 = ["togapa2", "togapa3", "togapa4"];
+    
+        // Common select options for each group
+        const commonOptionsGroup1 = [
+            "छान्नुहोस",
+            "....",
+            "गा.पा.",
+            "न.पा.",
+            "म.न.पा.",
+            "उप.म.न.पा."
+        ];
+
+        const commonOptionsGroup2 = [
+            "छान्नुहोस",
+            ".....",
+            "१",
+            "२",
+            "३",
+            "४"
+        ];
+    
+        // Create select elements using the reduce method for Group 1
+        selectIdsGroup1.forEach(selectId => {
+            const selectElement = document.getElementById(selectId);
+            if (selectElement) {
+                const selectOptions = commonOptionsGroup1.reduce((html, option) => {
+                    return html + `<option>${option}</option>`;
+                }, "");
+    
+                $(selectElement).html(selectOptions);
+            }
+        });
+
+        // Create select elements using the reduce method for Group 2
+        selectIdsGroup2.forEach(selectId => {
+            const selectElement = document.getElementById(selectId);
+            if (selectElement) {
+                const selectOptions = commonOptionsGroup2.reduce((html, option) => {
+                    return html + `<option>${option}</option>`;
+                }, "");
+    
+                $(selectElement).html(selectOptions);
+            }
+        });
+    </script>
+</body>
+</html>

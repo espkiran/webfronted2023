@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/spkiran/Downloads/Jest/ppppDocument.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./rtyuDocument_files/growmore.css">
+</head>
+<body>
+  <div class="alert" style="display: none;">Form draft has been saved!</div>
+  <form id="save-later-form">
+      <button type="button" id="save">SAVE</button>
+    <div class="container">
+
+      <div class="item items6">
+        <select name="iwe" id="iwe" style="text-align: right;">
+          <option value="i1">म</option>
+          <option value="i2">हामि</option>
+        </select>
+       <span id="iwetext">लाई</span> 
+        <select name="lwtype" id="loanWork" style="text-align: center;">
+          <option>छान्नुहोस</option>
+          <option>.......</option>
+          <option>ब्यक्तिगत</option>
+          <option>साना ब्यावसाय</option>
+          <option>ब्यापार</option>
+          <option>तत्काल</option>
+        </select>
+        कार्य गर्नका लागि
+        <select name="ltype" id="ltype" style="text-align: center;">
+          <option value="छान्नुहोस">छान्नुहोस</option>
+          <option value="ब्यक्तिगत">ब्यक्तिगत</option>
+          <option>साना ब्यावसायी</option>
+          <option>IPO</option>
+          <option>ग्रोमोर शेयर</option>
+          <option value="ब्यक्तिगत जमानी">ब्यक्तिगत जमानी</option>
+          <option value="ब्यापार">ब्यापार</option>
+          <option value="तत्काल">तत्काल</option>
+          <option value="कृषि">कृषि</option>
+          <option value="भेहिकल">भेहिकल</option>
+        </select>
+        कर्जा शिर्षकमा रु. <input type="text" name="mcash" id="csh">
+        कर्जाको गरेको
+        <select name="chhu" id="chhu">
+          <option value="1">छु</option>
+          <option value="2">छाैं</option>
+        </select>। <br><br>
+      </div>
+        
+            <div class="item items8">
+        <b>ख) माग गरेको कर्जा सम्बन्धि विवरण र शर्तहरुः</b> <br>
+        <table style="width: 100%">
+          <tbody><tr>
+            <th style="width: 33.33%; font-size: 18px;"> १) कर्जाको
+              शिर्षक
+              <span id="loantype" style="font-weight:bolder ; font-size: 20px;"></span>
+            </th>
+            <th style="width: 33.33%;"> २) कर्जा रकम प्रयोग हुने उद्देश्य
+            </th>
+            <th style="width: 33.33%;"><input type="text" name="pcost" id="pcost"> </th>
+          </tr>
+          <tr>
+            <td style="font-size: 17px;">३) परियोजनाको लागत रु.<input type="text" name="owncost" id="owncost">
+            </td>
+            <td> ४) आफुले
+              व्यहोर्ने <input type="text" name="perc" id="perc">% ले
+            </td>
+            <td>
+              रकम रु.
+              <input type="text" name="netcash" id="csh" oninput="inpf(this)">
+            </td>
+          </tr>
+          <tr>
+            <td>५) कर्जा माग रकम रु.
+              <span id="c1Amount" style="font-weight:bolder ; font-size: 20px;">789j0k00j00/-</span> &nbsp;&nbsp;
+            </td>
+            <td colspan="2">अक्षरेपी रु. &nbsp;&nbsp;<input type="text" name="cashdetail" id="cashdetail">
+            </td>
+          </tr>
+          <tr>
+            <td> ६) चुक्ता गर्ने अवधि
+              <select name="mperiodtime" id="mperiodtime"><option>छान्नुहोस</option><option>.....</option><option>१</option><option>२</option><option>३</option><option>४</option></select>
+              <select name="monthyear" id="monthyear">
+                <option>महिना</option>
+                <option>बर्ष</option>
+                <option>दिन</option>
+              </select>
+            </td><td colspan="2" style="font-size: 19px;"> ७) अन्तिम भुक्तानी मिति
+             <b>२०</b>  
+        <select name="paidyear" id="paidyear">
+          <option>छान्नुहोस</option>
+          <option>....</option>
+          <option>८०</option>
+          <option>८१</option>
+          <option>८२</option>
+          
+        </select> 
+        साल 
+        <select name="paidmonth" id="paidmonth">
+          <option>छान्नुहोस</option>
+          <option>.....</option>
+          <option>बैशाख</option>
+          <option>जेष्ठ</option>
+                </select>
+        महिना 
+        <select name="paidday" id="paidday"><option>छान्नुहोस</option><option>.....</option><option>१</option><option>२</option><option>३</option><option>४</option></select> 
+        गते
+            </td> </tr><tr>
+            <td colspan="3">८) किस्ता
+              भुक्तानी किसिमः
+              <select name="mperiodtype" id="mperiodtype">
+                <option>छान्नुहोस</option>
+                <option>.....</option>
+                <option>दैनिक</option>
+                <option>मासिक ब्याज भुक्तानी</option>
+              </select>
+          </td></tr>
+        </tbody></table>
+          <div class="item items21"> 
+          <input type="text" name="pzone" id="pzone">  अञ्चल  
+          <span id="pDist" style="font-weight:bolder ; font-size: 20px;"></span> जिल्ला  
+          <span id="pGapa" style="font-weight:bolder ; font-size: 20px;"></span>
+          <span id="poGapa" style="font-weight:bolder ; font-size: 20px;"></span>
+          वडा नं.  
+          <span id="pWard" style="font-weight:bolder ; font-size: 20px;"></span>  
+          घर भई हाल  
+          <input type="text" name="tzone" id="tzone">  
+          अञ्चल  
+          <span id="tDist" style="font-weight:bolder ; font-size: 20px;"></span>  
+        जिल्ला  
+        <span id="tGapa" style="font-weight:bolder ; font-size: 20px;"></span> 
+        <span id="toGapa" style="font-weight:bolder ; font-size: 20px;"></span> 
+        वडा नं. 
+        <span id="tWard" style="font-weight:bolder ; font-size: 20px;"></span> बस्ने श्री  
+        <span id="grandPa" style="font-weight:bolder ; font-size: 20px;">
+        </span>  को नाति/नातिनी/बुहारी  <span id="Father" style="font-weight:bolder ; font-size: 20px;"></span> को छोरा/छोरी  
+        <span id="wifeHub" style="font-weight:bolder ; font-size: 20px;"></span>  को पति/पत्नी वर्ष  
+        <span id="myAge" style="font-weight:bolder ; font-size: 20px;"></span>
+         को म  <span id="full1Name" style="font-weight:bolder ; font-size: 20px;"> </span> ले  लिमिटेड, 
+         टोखा- ९  (गोंगबु) बाट  <span id="loan1type" style="font-weight:bolder ; font-size: 20px;"></span> कर्जा शीर्षकमा आजका मितिमा रू.  
+         <span id="c2Amount" style="font-weight:bolder ; font-size: 20px;">789j0k00j00/-</span>  
+         अक्षरेपी रू.  &nbsp;<span id="cashDetail" style="font-weight:bolder ; font-size: 20px;"></span>  कर्जा लिएको ठिक साँचो हो । 
+         यस कर्जामा वार्षिक  <input type="text" name="intperc" id="intPerc"> % प्रतिशतका दरले गर्दछौँ । 
+      </div>
+          <div class="item items26">
+
+        <h3>
+        इति सम्वत् २०
+        <select name="todayyear" id="todayyear" style="font-size: 20px; width: 44px;">
+          <option>....</option>
+          <option>७९</option>
+          <option>८०</option>
+          <option>८१</option>
+        </select> 
+        साल 
+        <select name="todaymonth" id="todaymonth" style="font-size: 20px; width: 84px;">
+          <option>.....</option>
+          <option>बैशाख</option>
+          <option>जेष्ठ</option>
+          <option>असार</option>
+                  </select> 
+        महिना 
+        <select name="todayday" id="todayday" style="font-size: 20px; width: 44px;"><option>छान्नुहोस</option><option>.....</option><option>१</option><option>२</option><option>३</option><option>४</option></select> 
+        गते 
+        रोज 
+        <select name="weekday" id="weekday" style="font-size: 20px; width: 34px;">
+          <option>.....</option>
+          <option>१</option>
+          <option>२</option>
+                 </select> 
+        शुभम् । 
+      </h3> </div>
+            </div>
+      <div class="item items15">
+        लिखितम धनीका  श्री 
+        <span id="grand1Pa" style="font-weight:bolder ; font-size: 20px;"></span> को नाति /नातिनी/बुहारी श्री 
+        <span id="Father1" style="font-weight:bolder ; font-size: 20px;"></span> का छोरा/छोरी/श्रीमती 
+        <span id="p1Dist" style="font-weight:bolder ; font-size: 20px;"></span>
+        जिल्ला 
+        <span id="p1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+        <span id="po1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+        वडा नं. 
+        <span id="p1Ward" style="font-weight:bolder ; font-size: 20px;"></span>
+        घर भै हाल 
+        <span id="t1Dist" style="font-weight:bolder ; font-size: 20px;"></span> 
+        जिल्ला 
+        <span id="t1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+        <span id="to1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+        , वडा नं. 
+        <span id="t1Ward" style="font-weight:bolder ; font-size: 20px;"></span> 
+        बस्ने नागरिकता प्रमाण-पत्र नं. <input type="text" name="citzno" id="citzno"> को, 
+        <span id="p2Dist" style="font-weight:bolder ; font-size: 20px;"></span>
+        जिल्लाका
+        वर्ष <span id="my1Age" style="font-weight:bolder ; font-size: 20px;"></span>
+                का धनी संस्थाको सदस्यता नं.
+        <span id="mr2cr" style="font-weight:bolder ; font-size: 20px;"></span> 
+        <span id="mrNo" style="font-weight:bolder ; font-size: 20px;"></span> 
+        का श्री/श्रीमती 
+        <span id="full2Name" style="font-weight:bolder ; font-size: 20px;"> </span> ले 
+        <span id="lwtype" style="font-weight:bolder ; font-size: 20px;">साना ब्यावसाय</span> कार्य गर्नका लागि मिति 
+        <span id="todayDate" style="font-weight:bolder ; font-size: 20px;"></span>
+        मा मितिमा रु. 
+        <span id="c3Amount" style="font-weight:bolder ; font-size: 20px;">789j0k00j00/-</span>&nbsp;&nbsp;
+        (अक्षरेपी 
+        &nbsp;<span id="cash1Detail" style="font-weight:bolder ; font-size: 20px;"></span> )
+        ऋणवार्षिक <span id="PercInt" style="font-weight:bolder ; font-size: 20px;"></span> % कासमेत <b>२०</b> 
+        <span id="paidYear" style="font-weight:bolder ; font-size: 20px; margin: -5px;"></span>
+        साल 
+        <span id="paidMonth" style="font-weight:bolder ; font-size: 20px;"></span>
+        महिना 
+        <span id="paidDay" style="font-weight:bolder ; font-size: 20px;"></span> 
+        गते भित्र 
+        <span id="mPeriodType" style="font-weight:bolder ; font-size: 20px;"></span>
+        किस्तामा दिएँ।
+      </div>
+      
+      <div class="item items17">
+                <h3 style="text-align: center;">
+          इति सम्वत् २०
+          <span id="TodayYear" style="font-weight:bolder ; font-size: 20px;"> </span>
+          साल 
+          
+          <span id="TodayMonth" style="font-weight:bolder ; font-size: 20px;"> </span>
+          महिना 
+          <span id="TodayDay" style="font-weight:bolder ; font-size: 20px;"> </span> 
+          गते 
+          रोज 
+          <span id="TodayWeekDay" style="font-weight:bolder ; font-size: 20px;"> </span>
+          शुभम् । 
+        </h3>
+        
+        <script src="./rtyuDocument_files/jquery.min.js.download"></script>
+        <!-- <script src="./Docuकबखभऔसेभment_files/script.js.download"></script> -->
+       <script src="./rtyuDocument_files/jquery.min.js(1).download"></script>
+  <!-- <script src="script.js"></script> -->
+
+<script>
+  const formId = "save-later-form"; 
+  const url = location.href; 
+  const formIdentifier = `${url} ${formId}`; 
+  const saveButton = document.querySelector("#save"); 
+  const alertBox = document.querySelector(".alert"); 
+  let form = document.querySelector(`#${formId}`); 
+  let formElements = form.elements; 
+  const saveFormData = () => {
+    let data = { [formIdentifier]: {} };
+    for (const element of formElements) {
+      if (element.name.length > 0) {
+        if (element.tagName === "SELECT") {
+          data[formIdentifier][element.name] = element.value;
+        } else if (element.type === "text") {
+          data[formIdentifier][element.name] = element.value;
+        }
+      }
+    }
+    localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+    const message = "Form draft has been saved!";
+    displayAlert(message);
+  };
+  saveButton.onclick = event => {
+    event.preventDefault();
+    saveFormData();
+  };
+
+  for (const element of formElements) {
+    if (element.type === "text" || element.tagName === "SELECT") {
+      element.addEventListener("change", saveFormData);
+      element.addEventListener("input", saveFormData); 
+    }
+  }
+  const displayAlert = message => {
+    alertBox.innerText = message;
+    alertBox.style.display = "block";
+    setTimeout(function () {
+      alertBox.style.display = "none";
+    }, 1000);
+  };
+  window.onload = populateForm;
+  function populateForm() {
+    if (localStorage.key(formIdentifier)) {
+      const savedData = JSON.parse(localStorage.getItem(formIdentifier));
+      for (const element of formElements) {
+        if (element.name in savedData) {
+          if (element.tagName === "SELECT") {
+            element.value = savedData[element.name];
+          } else if (element.type === "text") {
+            element.value = savedData[element.name];
+          }
+        }
+      }
+      const message = "Form has been refilled with saved data!";
+      displayAlert(message);
+    }
+  }
+</script>
+<script>
+const selectIdsGroup1 = ["togapa1", "pogapa", "togapa5", "togapa6", "togapa"];
+const selectIdsGroup2 = ["togapa2", "togapa3", "togapa4", "pward", "tward", "mperiodtime", "paidday", "housefloor", "todayday"];
+  const commonOptionsGroup1 = [
+      "छान्नुहोस",
+      "....",
+      "गा.पा.",
+      "न.पा.",
+      "म.न.पा.",
+      "उप.म.न.पा."
+  ];
+  const commonOptionsGroup2 = [
+      "छान्नुहोस",
+      ".....",
+      "१",
+      "२",
+      "३",
+      "४",
+  ];
+  selectIdsGroup1.forEach(selectId => {
+      const selectElement = document.getElementById(selectId);
+      if (selectElement) {
+          const selectOptions = commonOptionsGroup1.reduce((html, option) => {
+              return html + `<option>${option}</option>`;
+          }, "");
+          $(selectElement).html(selectOptions);
+      }
+  });
+  selectIdsGroup2.forEach(selectId => {
+      const selectElement = document.getElementById(selectId);
+      if (selectElement) {
+          const selectOptions = commonOptionsGroup2.reduce((html, option) => {
+              return html + `<option>${option}</option>`;
+          }, "");
+          $(selectElement).html(selectOptions);
+      }
+  });
+</script>
+
+
+<script>
+  // Function to update the output elements based on the input value
+  function updateOutput() {
+    const cshInput = document.getElementById('csh');
+    const c1Amount = document.getElementById('c1Amount');
+    const c2Amount = document.getElementById('c2Amount');
+    const c3Amount = document.getElementById('c3Amount');
+
+    // Retrieve the text value from the input field
+    const inputValueText = cshInput.value;
+
+    // Set the output elements to match the input value text
+    c1Amount.textContent = inputValueText;
+    c2Amount.textContent = inputValueText;
+    c3Amount.textContent = inputValueText;
+
+    // Store the input value text in local storage
+    localStorage.setItem('cshValue', inputValueText);
+  }
+
+  // Function to load the input value from local storage
+  function loadInputValue() {
+    const cshInput = document.getElementById('csh');
+    const savedValueText = localStorage.getItem('cshValue');
+    if (savedValueText !== null) {
+      cshInput.value = savedValueText;
+      updateOutput(); // Update the output when loading the input value
+    }
+  }
+
+  // Add event listeners to call the functions
+  const cshInput = document.getElementById('csh');
+  cshInput.addEventListener('input', updateOutput);
+
+  // Load the input value from local storage on page load
+  window.addEventListener('load', loadInputValue);
+
+  </script>
+
+<script>
+
+// function updateLoanWork() {
+//   const loanWorkSelect = document.getElementById('loanWork');
+//   const lwtypeElement = document.getElementById('lwtype');
+
+//   // Check if a single option is selected
+//   if (loanWorkSelect.selectedIndex === -1) {
+//     lwtypeElement.textContent = ''; // No option selected, clear lwtype
+//   } else if (loanWorkSelect.selectedIndex === 0) {
+//     // First option is selected, set lwtype to its text value
+//     lwtypeElement.textContent = loanWorkSelect.options[0].text;
+//   } else {
+//     // A different option is selected, set lwtype to its text value
+//     lwtypeElement.textContent = loanWorkSelect.options[loanWorkSelect.selectedIndex].text;
+//   }
+// }
+
+// // Function to load the selected option's text value from local storage
+// function loadLoanWorkValue() {
+//   const loanWorkSelect = document.getElementById('loanWork');
+//   const savedValueText = localStorage.getItem('loanWorkValue');
+
+//   if (savedValueText !== null) {
+//     // Find the option with the matching text value and select it
+//     for (let i = 0; i < loanWorkSelect.options.length; i++) {
+//       if (loanWorkSelect.options[i].text === savedValueText) {
+//         loanWorkSelect.selectedIndex = i;
+//         break;
+//       }
+//     }
+
+//     updateLoanWork(); // Update lwtype when loading the selected option's text value
+//   }
+// }
+
+// // Add event listeners to call the functions
+// const loanWorkSelect = document.getElementById('loanWork');
+// loanWorkSelect.addEventListener('change', updateLoanWork);
+
+// // Load the selected option's text value from local storage on page load
+// window.addEventListener('load', loadLoanWorkValue);
+
+
+// Function to update the lwtype element
+function updateLoanWork() {
+  const loanWorkSelect = document.getElementById('loanWork');
+  const lwtypeElement = document.getElementById('lwtype');
+
+  // Check if a single option is selected
+  if (loanWorkSelect.selectedIndex === -1) {
+    lwtypeElement.textContent = ''; // No option selected, clear lwtype
+  } else if (loanWorkSelect.selectedIndex === 0) {
+    // First option is selected, set lwtype to its text value
+    lwtypeElement.textContent = loanWorkSelect.options[0].text;
+  } else {
+    // A different option is selected, set lwtype to its text value
+    lwtypeElement.textContent = loanWorkSelect.options[loanWorkSelect.selectedIndex].text;
+  }
+
+  // Store the selected option's text value in local storage
+  localStorage.setItem('loanWorkValue', lwtypeElement.textContent);
+}
+
+// Function to load the selected option's text value from local storage
+function loadLoanWorkValue() {
+  const lwtypeElement = document.getElementById('lwtype');
+  const savedValueText = localStorage.getItem('loanWorkValue');
+
+  if (savedValueText !== null) {
+    // Set the lwtype text content from local storage
+    lwtypeElement.textContent = savedValueText;
+  }
+}
+
+// Add event listeners to call the functions
+const loanWorkSelect = document.getElementById('loanWork');
+loanWorkSelect.addEventListener('change', updateLoanWork);
+
+// Load the selected option's text value from local storage on page load
+window.addEventListener('load', loadLoanWorkValue);
+
+
+</script>
+
+</div></div></form></body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="growmore.css" />
+  </head>
+<body>
+  <div class="alert"></div>
+  <form id="save-later-form">
+      <button type="button" id="save">SAVE</button>
+      <div class="container">
+      <div class="item items6">
+        <select name="iwe" id="iwe" style="text-align: right;">
+          <option value="i1">म</option>
+          <option value="i2">हामि</option>
+        </select>
+       <span id="iwetext">लाई</span> 
+        <select name="lwtype" id="loanWork" style="text-align: center;">
+          <option >छान्नुहोस</option>
+          <option>.......</option>
+          <option>ब्यक्तिगत</option>
+          <option>साना ब्यावसाय</option>
+          <option>ब्यापार</option>
+          <option>तत्काल</option>
+        </select>
+        कार्य गर्नका लागि
+        <select name="ltype" id="ltype" style="text-align: center;">
+          <option value="छान्नुहोस">छान्नुहोस</option>
+          <option value="ब्यक्तिगत">ब्यक्तिगत</option>
+          <option>साना ब्यावसायी</option>
+          <option>IPO</option>
+          <option>ग्रोमोर शेयर</option>
+          <option value="ब्यक्तिगत जमानी">ब्यक्तिगत जमानी</option>
+          <option value="ब्यापार">ब्यापार</option>
+          <option value="तत्काल">तत्काल</option>
+          <option value="कृषि">कृषि</option>
+          <option value="भेहिकल">भेहिकल</option>
+        </select>
+        कर्जा शिर्षकमा रु. <input type="text" name="mcash" id="csh"/>
+        कर्जाको आवश्यकता परेको हुँदा उक्त कर्जा पाऊँ भनि यो आवेदन पेश गरेको
+        <select name="chhu" id="chhu">
+          <option value="1">छु</option>
+          <option value="2">छाैं</option>
+        </select>। <br></br>
+      </div>
+
+      <div class="item items7">
+        <b>क) निवेदकको व्यक्तिगत विवरण : </b><br />
+        <table style="width: 100%">
+          <tr>
+            <th style="width: 33.33%; font-size: 18px;">१) नाम/थर
+              <input type="text" name="mcash" id="fname" />
+            </th>
+            <th style="width: 33.33%;">२. उमेर
+              <select name="myage" id="myage">
+                <option>....</option>
+                <option>१६</option>
+                <option>१७</option>
+                <option>१८</option>
+                <option>१९</option>
+                <option>२०</option>
+                
+              </select>बर्ष
+            </th> 
+            <th style="width: 33.33%;">
+              
+                ३) स्थाई ठेगानाः
+              <input type="text" name="mcash" id="pdist" />
+            </th>
+          </tr>
+          <tr>
+            <td>जिल्ला 
+              <input type="text" name="pgapa" id="pgapa" />
+              <select name="pogapa" id="pogapa">
+                <option >छान्नुहोस</option>
+                <option>....</option>
+                <option>गा.पा.</option>
+                <option>न.पा.</option>
+                <option>म.न.पा.</option>
+                <option>उप.म.न.पा.</option>
+              </select>
+            </td>
+            <td> वडा नं.
+              <select name="pward" id="pward">
+                <option >छान्नुहोस</option>
+                <option>....</option>
+                <option>१</option>
+                <option>२</option>
+                <option>३</option>
+                <option>४</option>
+                <option>५</option>
+             </select>
+            </td>
+            <td> टोल <input type="text" name="mcash" id="ptol" /></td>
+          </tr>
+          <tr>
+        </table>
+
+      </div>
+      </form>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+<script>
+  const formId = "save-later-form"; // ID of the form
+  const url = location.href; // href for the page
+  const formIdentifier = `${url} ${formId}`; // Identifier used to identify the form
+  const saveButton = document.querySelector("#save"); // select save button
+  const alertBox = document.querySelector(".alert"); // select alert display div
+  let form = document.querySelector(`#${formId}`); // select form
+  let formElements = form.elements; // get the elements in the form
+
+  // Function to save form data
+  const saveFormData = () => {
+    let data = { [formIdentifier]: {} };
+    for (const element of formElements) {
+      if (element.name.length > 0) {
+        data[formIdentifier][element.name] = element.value;
+      }
+    }
+    localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+    const message = "Form draft has been saved!";
+    displayAlert(message);
+  };
+
+  // Event handler for the "SAVE" button
+  saveButton.onclick = event => {
+    event.preventDefault();
+    saveFormData();
+  };
+
+  // Event listener for input fields
+    // Event listener for input fields and select elements
+
+
+  
+  for (const element of formElements) {
+    if (element.type === "text" || element.tagName === "SELECT") {
+      element.addEventListener("change", saveFormData);
+    }
+  }
+
+  for (const element of formElements) {
+  if (element.type === "text" || element.tagName === "SELECT") {
+    element.addEventListener("input", saveFormData); // Change "change" to "input" here
+  }
+}
+
+  const displayAlert = message => {
+    alertBox.innerText = message;
+    alertBox.style.display = "block";
+    setTimeout(function () {
+      alertBox.style.display = "none";
+    }, 1000);
+  };
+
+  const populateForm = () => {
+    if (localStorage.key(formIdentifier)) {
+      const savedData = JSON.parse(localStorage.getItem(formIdentifier));
+      for (const element of formElements) {
+        if (element.name in savedData) {
+          element.value = savedData[element.name];
+        }
+      }
+      const message = "Form has been refilled with saved data!";
+      displayAlert(message);
+    }
+  };
+
+  document.onload = populateForm();
+</script>
+
+
+</html>

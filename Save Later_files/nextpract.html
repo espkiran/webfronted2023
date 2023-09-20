@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./D001ocument_files/growmore.css">
+  </head>
+<body>
+<form id="save-later-form">
+  <div class="items4">  <button type="button" id="save">SAVE</button>
+  <div class="container">
+   <div class="items6">
+      <select name="iwe" id="iwe" style="text-align: right;">
+        <option value="i1">म</option>
+        <option value="i2">हामि</option>
+      </select>
+     <span id="iwetext">लाई</span> 
+      <select name="lwtype" id="loanWork" style="text-align: center;">
+        <option >छान्नुहोस</option>
+        <option>.......</option>
+        <option>ब्यक्तिगत</option>
+        <option>साना ब्यावसाय</option>
+        <option>ब्यापार</option>
+        <option>तत्काल</option>
+      </select>
+      कार्य गर्नका लागि
+      <select name="ltype" id="ltype" style="text-align: center;">
+        <option value="छान्नुहोस">छान्नुहोस</option>
+        <option value="ब्यक्तिगत">ब्यक्तिगत</option>
+        <option>साना ब्यावसायी</option>
+        <option>IPO</option>
+        <option>ग्रोमोर शेयर</option>
+        <option value="ब्यक्तिगत जमानी">ब्यक्तिगत जमानी</option>
+        <option value="ब्यापार">ब्यापार</option>
+        <option value="तत्काल">तत्काल</option>
+        <option value="कृषि">कृषि</option>
+        <option value="भेहिकल">भेहिकल</option>
+      </select>
+      कर्जा शिर्षकमा रु. <input type="text" name="mcash" id="csh"/>
+      कर्जाको आवश्यकता परेको हुँदा उक्त कर्जा पाऊँ भनि यो आवेदन पेश गरेको
+      <select name="chhu" id="chhu">
+        <option value="1">छु</option>
+        <option value="2">छाैं</option>
+      </select>। <br></br>
+    </div>
+        <div class="items7">
+          <b>क) निवेदकको व्यक्तिगत विवरण : </b><br>
+          <table style="width: 100%">
+              <tbody><tr>
+                  <th style="width: 33.33%; font-size: 18px;">१) नाम/थर
+                      <input type="text" name="fname" id="fname">
+                  </th>
+                  <th style="width: 33.33%;">२. उमेर
+                      <select name="myage" id="myage">
+                          <option>....</option>
+                          <option>१६</option>
+                          <option>१७</option>
+                          <option>१८</option>
+                          <option>१९</option>
+                          <option>२०</option>
+                          <option>२१</option>
+                      </select>बर्ष
+                  </th>
+                  <th style="width: 33.33%;">
+                      ३) स्थाई ठेगानाः
+                      <input type="text" name="pdist" id="pdist">
+                  </th>
+              </tr>
+              <tr>
+                  <td>जिल्ला
+                      <input type="text" name="pgapa" id="pgapa">
+                      <select name="pogapa" id="pogapa">
+                          <option>छान्नुहोस</option>
+                          <option>....</option>
+                          <option>गा.पा.</option>
+                          <option>न.पा.</option>
+                          <option>म.न.पा.</option>
+                          <option>उप.म.न.पा.</option>
+                      </select>
+                  </td>
+                  <td> वडा नं.
+                      <select name="pward" id="pward">
+                          <option>छान्नुहोस</option>
+                          <option>....</option>
+                          <option>१</option>
+                          <option>२</option>
+                          <option>३</option>
+                          <option>४</option>
+                          <option>५</option>
+                          <option>६</option>
+                      </select>
+                  </td>
+                  <td> टोल <input type="text" name="ptol" id="ptol"></td>
+              </tr>
+              <tr>
+                <td>४) हालको ठेगानाः
+                  <input type="text" name="tdist" id="tdist" />
+                </td>
+                <td>जिल्ला <input type="text" name="tgapaz" id="tgapaz" />
+                  <select name="togapa" id="togapa">
+                    <option >छान्नुहोस</option>
+                    <option>....</option>
+                    <option>गा.पा.</option>
+                    <option>न.पा.</option>
+                    <option>म.न.पा.</option>
+                    <option>उप.म.न.पा.</option>
+                  </select>
+                <td> वडा नं.
+                  <select name="tward" id="tward">
+                    <option >छान्नुहोस</option>
+                    <option>....</option>
+                    <option>१</option>
+                    <option>२</option>
+                    <option>३</option>
+                    <option>४</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td> टोल <input type="text" name="Ttol" id="ttol" /> </td>
+                <td> ५)
+                  <select name="ownhr" id="ownhr">
+                    <option >छान्नुहोस</option>
+                    <option>....</option>
+                    <option value="1">आफ्नै घर</option>
+                    <option value="2">बहाल</option>
+                  </select>मा
+                </td>
+                <td>घरको फोन नं.
+                  <input type="text" name="phone" id="phone" />
+                </td>
+              </tr>
+              <tr>
+                <td>मो.नं.
+                  <input type="text" name="mob" id="mob" />
+                </td>
+                <td style="font-size: 18px;">६) बाबुको नाम <input type="text" name="father" id="father" /></td>
+                <td style="font-size: 18px;"> ७)
+                  बाजे/ससुराको नाम <input type="text" name="grandpa" id="grandpa" /></td>
+              </tr>
+              <tr>
+                <td style="font-size: 17px;">
+                  ८)
+                  पति/पत्निको नामः <input type="text" name="wifehub" id="wifehub" /></td>
+                <td>
+                  ९)
+                  पेशा <input type="text" name="employ" id="employ" /></td>
+                <td>१०) सदस्य (CID)
+                  नं. <input type="text" name="cidno" id="cidno" /></td>
+              </tr>
+              <tr>
+                <td>११) संस्थाको सदस्यता
+                  नं. 
+                  <select name="mr1cr" id="mrcr">
+                  <option><b>छान्नुहोस</b></option>
+                  <option><b>MR-01-</b></option>
+                  <option><b>CR-01-</b></option>
+                </select>
+                  <input type="text" name="mrno" id="mrno" /></td>
+                <td> बनेको
+                  मिति <input type="text" name="maingdate" id="maingdate" /></td>
+                <td> १२. बचत
+                  खाता नं. 
+                  <select name="gscsa" id="gscsa">
+                    <option><b>GS-01-</b></option>
+                    <option><b>CSA-01-</b></option>
+                    <option><b>PSA-01-</b></option>
+                    <option><b>SA-01-</b></option>
+                  </select>
+                  <input type="text" name="gsno" id="gsno" /></td>
+              </tr>
+                          </table>
+      </div>
+      <div class="items8">
+        <table style="width: 100%">
+          <tr>
+            <th style="width: 33.33%; font-size: 18px;"> १) कर्जाको
+              शिर्षक
+              <span id="loantype" style="font-weight:bolder ; font-size: 20px;"></span>
+            </th> <tr>
+            <td>५) कर्जा माग रकम रु.
+              <span id="c1Amount" style="font-weight:bolder ; font-size: 20px;"></span> &nbsp;&nbsp;
+            </td>
+            <td colspan="2">अक्षरेपी रु. &nbsp;&nbsp;<input type="text" name="cashdetail" id="cashdetail" />
+            </td>
+          </tr>
+          <tr>
+            <td> ६) चुक्ता गर्ने अवधि
+              <select name="mperiodtime" id="mperiodtime">
+                <option >छान्नुहोस</option>
+                <option>....</option>
+                <option>१</option>
+                <option>२</option>
+                              </select>
+              <select name="monthyear" id="monthyear">
+                <option>महिना</option>
+                <option>बर्ष</option>
+                <option>दिन</option>
+              </select>
+            <td colspan="2" style="font-size: 19px;"> ७) अन्तिम भुक्तानी मिति
+             <b>२०</b>  
+        <select name="paidyear" id="paidyear">
+          <option >छान्नुहोस</option>
+          <option>....</option>
+          <option>८०</option>
+          <option>८१</option>
+          <option>८२</option>
+        </select> 
+        साल 
+        <select name="paidmonth" id="paidmonth">
+          <option >छान्नुहोस</option>
+          <option>.....</option>
+          <option>बैशाख</option>
+          <option>जेष्ठ</option>
+          <option>असार</option>
+          <option>श्रावण</option>
+          <option>भाद्र</option>
+          <option>असोज</option>
+          <option>कार्तिक</option>
+          <option>मंसिर</option>
+          <option>पुष</option>
+          <option>माघ</option>
+          <option>फागुन</option>
+          <option>चैत्र</option>
+        </select>
+        महिना 
+        <select name="paidday" id="paidday">
+          <option >छान्नुहोस</option>
+          <option>.....</option>
+          <option>१</option>
+          <option>२</option>
+          <option>३</option>
+          <option>४</option>
+        </select>         गते
+            </td> </tr><tr>
+            <td colspan="3">८) किस्ता
+              भुक्तानी किसिमः
+              <select name="mperiodtype" id="mperiodtype">
+                <option >छान्नुहोस</option>
+                <option>.....</option>
+                <option>दैनिक</option>
+                <option>मासिक</option>
+                <option>त्रैमासिक</option>
+                <option>एकमुष्ट</option>
+                <option>मासिक ब्याज भुक्तानी</option>
+              </select>
+          </tr>
+        </table>
+            <td style="padding: 0 0 0 35px">
+              दस्तखत: ... ... ... ... ... ... ... ... <br /><br />
+              नाम: <span id="fullName" style="font-weight:bolder ; font-size: 20px;"></span><br /><br />
+              मिति: <input type="text" name="todaydate" id="todaydate" />
+            </td>
+          </tr>
+        </table>
+        <br>
+      </div>
+      <div class="items12">
+        <table style="width: 100%">
+          <tr>
+            <th style="width: 5%">क्र.सं.</th>
+            <th>जमानी बस्नेको नाम</th>
+            <th>ठेगाना</th>
+            <th>सदस्य नं.</th>
+            <th>खाता नंं.</th>
+            <th>माैज्दात रकम</th>
+            <th>दस्तखत</th>
+          </tr>
+          <tr>
+            <td style="text-align: center;">१.</td>
+            <td><input type="text" name="memo21" id="memo21" /></td>
+            <td>
+              <input type="text" name="memo22a" id="memo22a"  />जिल्ला,  
+              <input type="text" name="memo22b" id="memo22b" />
+              <select name="togapa1" id="togapa1">
+                <option >छान्नुहोस</option>
+                <option>....</option>
+                <option>गा.पा.</option>
+                <option>न.पा.</option>
+                <option>म.न.पा.</option>
+                <option>उप.म.न.पा.</option>
+              </select>
+              <select name="togapa2" id="togapa2">
+                <option >छान्नुहोस</option>
+                <option>.....</option>
+                <option>१</option>
+                <option>२</option>
+                <option>३</option>
+                <option>४</option>
+              </select> नं. वडा 
+              <input type="text" name="memo22d" id="memo22d" />टोल    
+            </td>
+            <td><input type="text" name="memo23" id="memo23" /></td>
+            <td><input type="text" name="memo24" id="memo24" /></td>
+            <td><input type="text" name="memo25" id="memo25" /></td>
+            <td><input type="text" name="memo26" id="memo26" /></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">२</td>
+            <td><input type="text" name="memo27" id="memo27" /></td>
+           <td> <input type="text" name="memo28a" id="memo28a" />जिल्ला, 
+            <input type="text" name="memo28b" id="memo28b" />
+            <select name="togapa5" id="togapa5">
+              <option >छान्नुहोस</option>
+              <option>....</option>
+              <option>गा.पा.</option>
+              <option>न.पा.</option>
+              <option>म.न.पा.</option>
+              <option>उप.म.न.पा.</option>
+            </select>
+            <select name="togapa3" id="togapa3">
+              <option >छान्नुहोस</option>
+              <option>.....</option>
+              <option>१</option>
+              <option>२</option>
+              <option>३</option>
+              <option>४</option>
+            </select>नं. वडा
+            <input type="text" name="memo28d" id="memo28d" />टोल  </td>
+            <td><input type="text" name="memo29" id="memo29" /></td>
+            <td><input type="text" name="memo30" id="memo30" /></td>
+            <td><input type="text" name="memo31" id="memo31" /></td>
+            <td><input type="text" name="memo32" id="memo32" /></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">३</td>
+            <td><input type="text" name="memo33" id="memo33" /></td>
+            <td><input type="text" name="memo34" id="memo34a" />जिल्ला, 
+            <input type="text" name="memo34" id="memo34b" />
+            <select name="togapa6" id="togapa6">
+              <option >छान्नुहोस</option>
+              <option>....</option>
+              <option>गा.पा.</option>
+              <option>न.पा.</option>
+              <option>म.न.पा.</option>
+              <option>उप.म.न.पा.</option>
+            </select> 
+            <select name="togapa4" id="togapa4">
+              <option >छान्नुहोस</option>
+              <option>.....</option>
+              <option>१</option>
+              <option>२</option>
+              <option>३</option>
+              <option>४</option>
+            </select> नं. वडा
+            <input type="text" name="memo34" id="memo34d" />टोल  </td> 
+            <td><input type="text" name="memo35" id="memo35" /></td>
+            <td><input type="text" name="memo36" id="memo36" /></td>
+            <td><input type="text" name="memo37" id="memo37" /></td>
+            <td><input type="text" name="memo38" id="memo38" /></td>
+          </tr>
+        </table>
+        <br>
+      </div>
+              <div class="items21"> 
+          <input type="text" name="pzone" id="pzone"/>  अञ्चल  
+          <span id="pDist" style="font-weight:bolder ; font-size: 20px;"></span> जिल्ला  
+          
+          <span id="pGapa" style="font-weight:bolder ; font-size: 20px;"></span>
+          <span id="poGapa" style="font-weight:bolder ; font-size: 20px;"></span>
+          
+          वडा नं.  
+          
+          <span id="pWard" style="font-weight:bolder ; font-size: 20px;"></span>  
+          घर भई हाल  
+          <input type="text" name="tzone" id="tzone"/>  
+          अञ्चल  
+          <span id="tDist" style="font-weight:bolder ; font-size: 20px;"></span>  
+        जिल्ला  
+        <span id="tGapa" style="font-weight:bolder ; font-size: 20px;"></span> 
+        <span id="toGapa" style="font-weight:bolder ; font-size: 20px;"></span> 
+        
+        वडा नं. 
+        <span id="tWard" style="font-weight:bolder ; font-size: 20px;"></span> बस्ने श्री  <span id="grandPa" style="font-weight:bolder ; font-size: 20px;"></span>  को नाति/नातिनी/बुहारी  <span id="Father" style="font-weight:bolder ; font-size: 20px;"></span> को छोरा/छोरी  
+        <span id="wifeHub" style="font-weight:bolder ; font-size: 20px;"></span>  को पति/पत्नी वर्ष  
+        <span id="myAge" style="font-weight:bolder ; font-size: 20px;"></span>
+         को म  <span id="full1Name" style="font-weight:bolder ; font-size: 20px;"> </span> ले यस ग्रोमोर बचत तथा ऋण सहकारी संस्था लिमिटेड, 
+         टोखा- ९  (गोंगबु) बाट  <span id="loan1type" style="font-weight:bolder ; font-size: 20px;"></span> कर्जा शीर्षकमा आजका मितिमा रू.  
+         <span id="c2Amount" style="font-weight:bolder ; font-size: 20px;" ></span>  
+         अक्षरेपी रू.  &nbsp;<span id="cashDetail" style="font-weight:bolder ; font-size: 20px;"></span>  कर्जा लिएको ठिक साँचो हो । 
+         यस कर्जामा वार्षिक  <input type="text" name="intperc" id="intPerc"/> % प्रतिशतका दरले वा संस्थाले पछि निर्णय गरी लागु गर्ने वा हेरफेर गरी तोकिने दर बमोजिमको ब्याज र अन्य नियमानुसारको शुल्क समेत आफूले लिएको सम्पूर्ण रकम संस्थाले भुक्तानी माग गरेका बखत तिर्ने/बुझाउने कबुल गर्दछु / गर्दछौँ । <br> <br><br><br>
+      </div>
+      
+            दस्तखत: ... ... ... ... ... ... ... ... <br /><br />
+            नाम: <span id="full3Name" style="font-weight:bolder ; font-size: 20px;"> </span><br /><br />
+            ठेगाना: <span id="t2Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+            <span id="to2Gapa" style="font-weight:bolder ; font-size: 20px;"></span>, <b>वडा नं.</b>
+            <span id="t2Ward" style="font-weight:bolder ; font-size: 20px;"></span>, 
+            <span id="t2Dist" style="font-weight:bolder ; font-size: 20px;"></span>
+            <br>
+            सम्पर्क फोन मोबाइल नं.: <span id="Mob" style="font-weight:bolder ; font-size: 20px;"> </span><br>
+            
+          </td>
+        </tr>
+      </table> <br><br><br>
+    <br></div>
+      <div class="items25">
+        <div class="items12">
+
+          <table style="width: 100%">
+            <tr>
+              <th style="width: 5%">क्र.सं.</th>
+              <th>साक्षी बस्नेको नाम</th>
+              <th>ठेगाना</th>
+              <th>सदस्य नं.</th>
+              <th>खाता नंं.</th>
+              <th>माैज्दात रकम</th>
+              <th>दस्तखत</th>
+            </tr>
+            <tr>
+              <td style="text-align: center;">१.</td>
+              <td><span id="Ememo21" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo22" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo23" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo24" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo25" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><input type="text" name="memo26" id="memo26" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">२</td>
+              <td><span id="Ememo27" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo28" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo29" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo30" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo31" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><input type="text" name="memo32" id="memo32" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">३</td>
+              <td><span id="Ememo33" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo34" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo35" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo36" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><span id="Ememo37" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+              <td><input type="text" name="memo38" id="memo38" /></td>
+            </tr>
+          </table><br><br><br>
+        </div>
+        
+
+      </div>
+      <div class="items26">
+        <br>
+        <h3>
+        इति सम्वत् २०
+        <select name="todayyear" id="todayyear" style="font-size: 20px; width: 44px;">
+          <option>....</option>
+          <option>७९</option>
+          <option>८०</option>
+          <option>८१</option>
+          <option>८२</option>
+          <option>८३</option>
+          <option>८४</option>
+          <option>८५</option>
+          <option>८६</option>
+          <option>८७</option>
+          <option>८८</option>
+          <option>८९</option>
+        </select> 
+        साल 
+        
+        <select name="todaymonth" id="todaymonth" style="font-size: 20px; width: 84px;">
+          <option>.....</option>
+          <option>बैशाख</option>
+          <option>जेष्ठ</option>
+          <option>असार</option>
+          <option>श्रावण</option>
+          <option>भाद्र</option>
+          <option>असोज</option>
+          <option>कार्तिक</option>
+          <option>मंसिर</option>
+          <option>पुष</option>
+          <option>माघ</option>
+          <option>फागुन</option>
+          <option>चैत्र</option>
+        </select> 
+        महिना 
+        <select name="todayday" id="todayday" style="font-size: 20px; width: 44px;">
+          <option>.....</option>
+          <option>१</option>
+          <option>२</option>
+          <option>३</option>
+          <option>४</option>
+         
+
+        </select> 
+        गते 
+        रोज 
+        <select name="weekday" id="weekday" style="font-size: 20px; width: 34px;">
+          <option>.....</option>
+          <option>१</option>
+          <option>२</option>
+          <option>३</option>
+          <option>४</option>
+          
+        </select> 
+        शुभम् । 
+      </h3> 
+</div>
+
+      <div class="items14" style="writing-mode: vertical-rl;">
+        
+                  <div id="tester">
+          <table class="test1">
+            <tr>
+              <td colspan="2" style="font-size: 17px; text-align: center;" width="19px">ऋणीको दस्तखत</td>
+              <td style="text-align: center;">साक्षी</td>
+
+            </tr>
+            <tr>
+              <td rowspan="3" style="font-size: 17px; text-align: center; border: 1px solid black;" height="119px";>दाँया &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></td>
+              <td rowspan="3" style="font-size: 17px; text-align: center; border: 1px solid black;" height="119px"> बाँया &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></td>
+              <td rowspan="3" style="font-size: 20px;" width="149px"> 
+                १)<span id="gMemo11" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 जिल्ला  
+                 <span id="gMemo13" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 <span id="togapa7" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 <span id="gMemo15" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 नं. वडा
+                 <span id="gMemo16" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 
+                 टोल बस्ने बर्ष 
+                 &nbsp;<input type="text" name="pdist" id="memo177" />&nbsp; </span>
+                 को श्री 
+                 <span id="gMemo18" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 
+                 <br> 
+                 २) 
+                 <span id="gMemo12" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 जिल्ला
+                 <span id="gMemo14" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 <span id="togapa8" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 <span id="gMemo21" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 नं. वडा
+                 <span id="gMemo22" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 टोल बस्ने बर्ष
+                 &nbsp;<input type="text" name="pdist" id="memo177" />&nbsp; </span>
+                 को श्री 
+                 <span id="gMemo24" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 <br>
+                 ३) 
+                 <span id="gMemo19" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 जिल्ला
+                 <span id="gMemo20" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 <span id="togapa9" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 <span id="gMemo25" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 नं. वडा
+                 <span id="gMemo26" style="font-weight:bolder ; font-size: 20px;"> </span>
+                 टोल बस्ने बर्ष
+                 &nbsp;<input type="text" name="pdist" id="memo177" />&nbsp; </span>
+                को श्री 
+                <span id="gMemo28" style="font-weight:bolder ; font-size: 20px;"> </span>
+               
+              </td>
+              
+            </tr>
+            <tr class="test2">
+              
+              <td rowspan="2" style="width:12px; ">  </td>
+              
+            </tr>
+            
+          </table>
+       </div>
+    
+      </div>
+      <div class="items15">
+        लिखितम श्री 
+        <span id="grand1Pa" style="font-weight:bolder ; font-size: 20px;">
+        </span> को नाति /नातिनी/बुहारी श्री <span id="Father1" style="font-weight:bolder ; font-size: 20px;">
+        </span> का छोरा/छोरी/श्रीमती 
+        <span id="p1Dist" style="font-weight:bolder ; font-size: 20px;"></span>
+        जिल्ला 
+        
+        <span id="p1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+        <span id="po1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+          
+        
+        वडा नं. 
+        <span id="p1Ward" style="font-weight:bolder ; font-size: 20px;"></span>
+        
+        घर भै हाल 
+        <span id="t1Dist" style="font-weight:bolder ; font-size: 20px;"></span> 
+        
+        जिल्ला 
+        <span id="t1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+        <span id="to1Gapa" style="font-weight:bolder ; font-size: 20px;"></span>
+          
+        
+        , वडा नं. 
+        <span id="t1Ward" style="font-weight:bolder ; font-size: 20px;"></span> 
+        
+        बस्ने नागरिकता प्रमाण-पत्र नं. <input type="text" name="citzno" id="citzno"> को, 
+        <span id="p2Dist" style="font-weight:bolder ; font-size: 20px;"></span>
+        जिल्लाका
+        वर्ष <span id="my1Age" style="font-weight:bolder ; font-size: 20px;"></span>
+                का धनी संस्थाको सदस्यता नं.
+        <span id="mr2cr" style="font-weight:bolder ; font-size: 20px;"></span> 
+        <span id="mrNo" style="font-weight:bolder ; font-size: 20px;"></span> 
+        
+        का श्री/श्रीमती 
+        <span id="full2Name" style="font-weight:bolder ; font-size: 20px;"> </span> ले 
+        <span id="lwtype" style="font-weight:bolder ; font-size: 20px;"></span> कार्य गर्नका लागि मिति 
+        <span id="todayDate" style="font-weight:bolder ; font-size: 20px;"></span>
+        
+        मा 
+        <span id="c3Amount" style="font-weight:bolder ; font-size: 20px;"></span>&nbsp;&nbsp;
+        (अक्षरेपी 
+        
+        &nbsp;<span id="cash1Detail" style="font-weight:bolder ; font-size: 20px;"></span> )
+        
+        ऋण वार्षिक <span id="PercInt" style="font-weight:bolder ; font-size: 20px;"></span> % का समेत <b>२०</b> 
+        
+        <span id="paidYear" style="font-weight:bolder ; font-size: 20px; margin: -5px;"></span>
+        साल 
+       
+        <span id="paidMonth" style="font-weight:bolder ; font-size: 20px;"></span>
+
+        महिना 
+        <span id="paidDay" style="font-weight:bolder ; font-size: 20px;"></span> 
+        गते भित्र 
+        <span id="mPeriodType" style="font-weight:bolder ; font-size: 20px;"></span>
+        
+        किस्तामा
+        सम्पूर्ण दिएँ।
+
+      </div>
+
+
+      <div class="items16a">तपसिल</div>
+      <div class="items16b">व्यक्तिगत धन जमानीको विवरण</div>
+      <div class="items16">
+        <table style="width: 100%">
+          <tr>
+         
+          <tr>
+            <td style="text-align: center;">जमानी बस्ने सदस्यको विवरण</td>
+            <td style="text-align: center;">सदस्यता नं.</td>
+            <td style="text-align: center;"> ठेगाना</td>
+            <td style="text-align: center;">जमानी बस्न कबुल गरेको रकम</td>
+            <td style="text-align: center;">ऋणीले गर्ने
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+                <span id="gMemo1" style="font-weight:bolder ; font-size: 20px;"> </span>
+            </td><td>
+            <span id="gMemo7" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+            <td style="text-align: center;">
+              <span id="gMemo4" style="font-weight:bolder ; font-size: 20px;"> </span>
+            </td>
+            <td style="text-align: center;"><input type="text" name="memo79" id="memo79" /></td>
+            <td style="text-align: center;"><input type="text" name="memo80" id="memo80" /></td>
+
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <span id="gMemo2" style="font-weight:bolder ; font-size: 20px;"> </span>
+            </td><td>
+            <span id="gMemo8" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+            <td style="text-align: center;">
+              <span id="gMemo5" style="font-weight:bolder ; font-size: 20px;"> </span>
+            </td>
+            <td style="text-align: center;"><input type="text" name="memo84" id="memo84" /></td>
+            <td style="text-align: center;"><input type="text" name="memo85" id="memo85" /></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <span id="gMemo3" style="font-weight:bolder ; font-size: 20px;"> </span>
+            </td><td>
+            <span id="gMemo9" style="font-weight:bolder ; font-size: 20px;"> </span></td>
+            <td style="text-align: center;">
+              <span id="gMemo6" style="font-weight:bolder ; font-size: 20px;"> </span>
+            </td>
+            <td style="text-align: center;"><input type="text" name="memo84" id="memo84" /></td>
+            <td style="text-align: center;"><input type="text" name="memo85" id="memo85" /></td>
+          </tr>
+        </table>
+      </div>
+      <br>
+      <div class="items17">
+        <table style="width: 100%">
+          <tr>
+            <th style="width: 60%"></th>
+            <td colspan="2" ; style="width: 15%; text-align: center; ">ऋणीको दस्तखतः</td>
+          </tr>
+          <tr>
+            <th style="width: 60%"></th>
+            <th style="width: 15%">दाँया</th>
+            <th style="width: 15%">बाँया</th>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td style="width: 74px; height: 154px; border: 1px solid black"></td>
+            <td style="width: 74px; height: 154px; border: 1px solid black"></td>
+          </tr>
+        </table>
+        <br>
+        <h3 style="text-align: center;">
+          इति सम्वत् २०
+          <span id="TodayYear" style="font-weight:bolder ; font-size: 20px;"> </span>
+          साल 
+          <span id="TodayMonth" style="font-weight:bolder ; font-size: 20px;"> </span>
+          महिना 
+          <span id="TodayDay" style="font-weight:bolder ; font-size: 20px;"> </span> 
+          गते 
+          रोज 
+          <span id="TodayWeekDay" style="font-weight:bolder ; font-size: 20px;"> </span>
+          शुभम् । 
+        </h3>
+       </form>
+       <script src="./D001ocument_files/jquery.min.js.download"></script>
+       <script src="./D001ocument_files/script.js.download"></script>
+
+
+<script>
+    const formId = "save-later-form"; // ID of the form
+    const url = location.href; // href for the page
+    const formIdentifier = `${url} ${formId}`; // Identifier used to identify the form
+    const saveButton = document.querySelector("#save"); // select save button
+    const alertBox = document.querySelector(".alert"); // select alert display div
+    let form = document.querySelector(`#${formId}`); // select form
+    let formElements = form.elements; // get the elements in the form
+  
+    // Function to save form data
+    const saveFormData = () => {
+      let data = { [formIdentifier]: {} };
+      for (const element of formElements) {
+        if (element.name.length > 0) {
+          if (element.tagName === "SELECT") {
+            data[formIdentifier][element.name] = element.value;
+          } else if (element.type === "text") {
+            data[formIdentifier][element.name] = element.value;
+          }
+        }
+      }
+      localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+      const message = "Form draft has been saved!";
+      displayAlert(message);
+    };
+  
+    // Event handler for the "SAVE" button
+    saveButton.onclick = event => {
+      event.preventDefault();
+      saveFormData();
+    };
+  
+    // Event listener for input fields and select elements
+    for (const element of formElements) {
+      if (element.type === "text" || element.tagName === "SELECT") {
+        element.addEventListener("change", saveFormData);
+        element.addEventListener("input", saveFormData); // Change "change" to "input" here
+      }
+    }
+  
+    const displayAlert = message => {
+      alertBox.innerText = message;
+      alertBox.style.display = "block";
+      setTimeout(function () {
+        alertBox.style.display = "none";
+      }, 1000);
+    };
+  
+    // Use window.onload to ensure the entire page is loaded before running the code
+    window.onload = populateForm;
+  
+    function populateForm() {
+      if (localStorage.key(formIdentifier)) {
+        const savedData = JSON.parse(localStorage.getItem(formIdentifier));
+        for (const element of formElements) {
+          if (element.name in savedData) {
+            if (element.tagName === "SELECT") {
+              element.value = savedData[element.name];
+            } else if (element.type === "text") {
+              element.value = savedData[element.name];
+            }
+          }
+        }
+        const message = "Form has been refilled with saved data!";
+        displayAlert(message);
+      }
+    }
+  </script>
+   <script>
+    $(document).ready(function(){
+    $('#csh').change(function(){
+        let s = $(this).val();
+        $('#cAmount,#c1Amount,#c2Amount,#c3Amount').html(s);
+    });
+    $('#loanWork').change(function(){
+        let lw=$(this).val();
+        $('#lwtype').html(lw);
+    });
+    $('#ltype').change(function(){
+        let ltw=$(this).val();
+        $('#loantype,#loan1type').html(ltw);
+    });
+    $('#fname').change(function(){
+        let fnm=$(this).val();
+        $('#fullName,#full1Name,#full2Name,#full3Name').html(fnm);
+    });
+    $('#myage').change(function(){
+        let mage=$(this).val();
+        $('#myAge,#my1Age').html(mage);
+    });
+    $('#pdist').change(function(){
+        let pdis=$(this).val();
+        $('#pDist,#p1Dist,#p2Dist').html(pdis);
+    });
+    $('#tdist').change(function(){
+        let tdis=$(this).val();
+        $('#tDist,#t1Dist,#t2Dist').html(tdis);
+    });
+    $('#pgapa').change(function(){
+        let pga=$(this).val();
+        $('#pGapa,#p1Gapa,#p2Gapa').html(pga);
+    });
+    $('#pogapa').change(function(){
+        let pog=$(this).val();
+        $('#poGapa,#po1Gapa,#po2Gapa').html(pog);
+    });
+    $('#pward').change(function(){
+        let pwa=$(this).val();
+        $('#pWard,#p1Ward,#p2Ward').html(pwa);
+    });
+    $('#tgapaz').change(function(){
+        let tga=$(this).val();
+        $('#tGapa,#t1Gapa,#t2Gapa').html(tga);
+    });
+    $('#togapa').change(function(){
+        let tog=$(this).val();
+        $('#toGapa,#to1Gapa,#to2Gapa').html(tog);
+    });
+    $('#tward').change(function(){
+        let twa=$(this).val();
+        $('#tWard,#t1Ward,#t2Ward').html(twa);
+    });
+    $('#grandpa').change(function(){
+        let gra=$(this).val();
+        $('#grandPa,#grand1Pa,#grand2Pa').html(gra);
+    });
+    $('#father').change(function(){
+        let fat=$(this).val();
+        $('#Father,#Father1,#Father2').html(fat);
+    });
+    $('#wifehub').change(function(){
+        let wif=$(this).val();
+        $('#wifeHub,#wife1Hub,#wife2Hub').html(wif);
+    });
+    $('#cashdetail').change(function(){
+        let cas=$(this).val();
+        $('#cashDetail,#cash1Detail,#cash2Detail').html(cas);
+    });
+    $('#todaydate').change(function(){
+        let tod=$(this).val();
+        $('#todayDate,#today1Date,#today2Date').html(tod);
+    });
+    $('#mob').change(function(){
+        let mobi=$(this).val();
+        $('#Mob').html(mobi);
+    });
+    $('#mrno').change(function(){
+        let mrn=$(this).val();
+        $('#mrNo').html(mrn);
+    });
+
+    $('#mrcr').change(function(){
+        let mrcrt=$(this).val();
+        $('#mr2cr').html(mrcrt);
+    });
+
+
+    $('#intPerc').change(function(){
+        let int=$(this).val();
+        $('#PercInt').html(int);
+    });
+    $('#paidyear').change(function(){
+        let pai=$(this).val();
+        $('#paidYear').html(pai);
+    });
+    $('#paidmonth').change(function(){
+        let pmo=$(this).val();
+        $('#paidMonth').html(pmo);
+    });
+    $('#paidday').change(function(){
+        let pday=$(this).val();
+        $('#paidDay').html(pday);
+    });
+    $('#mperiodtype').change(function(){
+        let mpt=$(this).val();
+        $('#mPeriodType').html(mpt);
+    });
+    $('#memo21').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo21,#gMemo1,#gMemo18').html(mpt);
+    });
+    $('#memo27').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo27,#gMemo2,#gMemo24').html(mpt);
+    });
+    $('#memo33').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo33,#gMemo3,#gMemo28').html(mpt);
+    });
+    $('#memo22a').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo22,#gMemo4,#gMemo11').html(mpt);
+    });
+    $('#memo28a').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo28,#gMemo5,#gMemo12').html(mpt);
+    });
+    $('#memo34a').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo34,#gMemo6,#gMemo19').html(mpt);
+    });
+
+    $('#memo22b').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo13').html(mpt);
+    });
+
+    $('#memo28b').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo14').html(mpt);
+    });
+    $('#memo34b').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo20').html(mpt);
+    });
+    $('#togapa1').change(function(){
+        let mpt=$(this).val();
+        $('#togapa7').html(mpt);
+    });
+    $('#togapa5').change(function(){
+        let mpt=$(this).val();
+        $('#togapa8').html(mpt);
+    });
+    $('#togapa6').change(function(){
+        let mpt=$(this).val();
+        $('#togapa9').html(mpt);
+    });
+
+    $('#togapa2').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo15').html(mpt);
+    });
+    $('#togapa3').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo21').html(mpt);
+    });
+    $('#togapa4').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo25').html(mpt);
+    });
+    $('#memo22d').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo16').html(mpt);
+    });
+    $('#memo28d').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo22').html(mpt);
+    });
+    $('#memo34d').change(function(){
+        let mpt=$(this).val();
+        $('#gMemo26').html(mpt);
+    });
+    $('#memo23').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo23, #gMemo7').html(mpt);
+    });
+    $('#memo29').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo29, #gMemo8').html(mpt);
+    });
+    $('#memo35').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo35, #gMemo9').html(mpt);
+    });
+     $('#memo24').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo24').html(mpt);
+    });
+    $('#memo30').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo30').html(mpt);
+    });
+    $('#memo36').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo36').html(mpt);
+    });
+    $('#memo25').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo25').html(mpt);
+    });
+    $('#memo31').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo31').html(mpt);
+    });
+    $('#memo37').change(function(){
+        let mpt=$(this).val();
+        $('#Ememo37').html(mpt);
+    });
+    $('#todayyear').change(function(){
+        let mpt=$(this).val();
+        $('#TodayYear').html(mpt);
+    });
+    $('#todaymonth').change(function(){
+        let mpt=$(this).val();
+        $('#TodayMonth').html(mpt);
+    });
+    $('#todayday').change(function(){
+        let mpt=$(this).val();
+        $('#TodayDay').html(mpt);
+    });
+    $('#weekday').change(function(){
+        let mpt=$(this).val();
+        $('#TodayWeekDay').html(mpt);
+    });
+
+});
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body><!-- Your HTML code --></html>
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/spkiran/Downloads/Jest/testpryas.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Save Later_files/form.css">
+    <title>Save Later</title>
+  </head>
+  <body>
+    <div class="alert"></div>
+    <form id="save-later-form">
+      <h3>Simple Save Later Form</h3>
+      <label for="full-name">Full Name</label>
+      <input type="text" name="full-name" id="full-name">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" id="phone" maxlength="11">
+      <label for="dob">Date Of Birth</label>
+      <input type="date" name="dob" id="dob">
+      <label for="security">Security Question</label>
+      <select name="security" id="security" tabindex="0">
+        <option value="">Select a question</option>
+        <option value="best-friend">What's your best friend's name?</option>
+        <option value="pet">What's the name of your first pet?</option>
+        <option value="spouse">Where did you meet your spouse?</option>
+      </select>
+      <label for="security-answer">Answer</label>
+      <input type="text" name="security-answer" id="security-answer">
+      <label for="description">Description</label>
+      <textarea name="description" id="description" placeholder="Describe yourself in 100 words"></textarea>
+      <button type="submit" id="submit">SUBMIT</button>
+      <button type="submit" id="save">SAVE</button>
+    </form>
+  
+  <script>
+    // form.js
+const formId = "save-later-form"; // ID of the form
+const url = location.href; //  href for the page
+const formIdentifier = `${url} ${formId}`; // Identifier used to identify the form
+const saveButton = document.querySelector("#save"); // select save button
+const alertBox = document.querySelector(".alert"); // select alert display div
+let form = document.querySelector(`#${formId}`); // select form
+let formElements = form.elements; // get the elements in the form
+
+/**
+ * This function gets the values in the form
+ * and returns them as an object with the
+ * [formIdentifier] as the object key
+ * @returns {Object}
+ */
+const getFormData = () => {
+  let data = { [formIdentifier]: {} };
+  for (const element of formElements) {
+    if (element.name.length > 0) {
+      data[formIdentifier][element.name] = element.value;
+    }
+  }
+  return data;
+};
+
+saveButton.onclick = event => {
+  event.preventDefault();
+  data = getFormData();
+  localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+  const message = "Form draft has been saved!";
+  displayAlert(message);
+};
+
+/**
+ * This function displays a message
+ * on the page for 1 second
+ *
+ * @param {String} message
+ */
+const displayAlert = message => {
+  alertBox.innerText = message;
+  alertBox.style.display = "block";
+  setTimeout(function() {
+    alertBox.style.display = "none";
+  }, 1000);
+};
+
+/**
+ * This function populates the form
+ * with data from localStorage
+ *
+ */
+const populateForm = () => {
+  if (localStorage.key(formIdentifier)) {
+    const savedData = JSON.parse(localStorage.getItem(formIdentifier)); // get and parse the saved data from localStorage
+    for (const element of formElements) {
+      if (element.name in savedData) {
+        element.value = savedData[element.name];
+      }
+    }
+    const message = "Form has been refilled with saved data!";
+    displayAlert(message);
+  }
+};
+
+document.onload = populateForm(); 
+  </script>
+
+</body></html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/spkiran/Downloads/Jest/D001ocument.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Docनजनument_files/growmore.css">
+  </head>
+<body>
+  <!-- Your HTML code -->
+
+<form id="save-later-form">
+  <button type="button" id="save">SAVE</button>
+  <div class="container">
+      <div class="item items6">
+          <!-- ... Other form elements ... -->
+          कर्जा शिर्षकमा रु. <input type="text" name="mcash" id="csh">
+          कर्जाको आवश्यकता परेको हुँदा उक्त कर्जा पाऊँ भनि यो आवेदन पेश गरेको
+          <select name="chhu" id="chhu">
+              <option value="1">छु</option>
+              <option value="2">छाैं</option>
+          </select>। <br><br>
+      </div>
+
+      <div class="item items7">
+          <b>क) निवेदकको व्यक्तिगत विवरण : </b><br>
+          <table style="width: 100%">
+              <tbody><tr>
+                  <th style="width: 33.33%; font-size: 18px;">१) नाम/थर
+                      <input type="text" name="fname" id="fname">
+                  </th>
+                  <th style="width: 33.33%;">२. उमेर
+                      <select name="myage" id="myage">
+                          <option>....</option>
+                          <option>१६</option>
+                          <option>१७</option>
+                          <option>१८</option>
+                          <option>१९</option>
+                          <option>२०</option>
+                      </select>बर्ष
+                  </th>
+                  <th style="width: 33.33%;">
+                      ३) स्थाई ठेगानाः
+                      <input type="text" name="pdist" id="pdist">
+                  </th>
+              </tr>
+              <tr>
+                  <td>जिल्ला
+                      <input type="text" name="pgapa" id="pgapa">
+                      <select name="pogapa" id="pogapa">
+                          <option>छान्नुहोस</option>
+                          <option>....</option>
+                          <option>गा.पा.</option>
+                          <option>न.पा.</option>
+                          <option>म.न.पा.</option>
+                          <option>उप.म.न.पा.</option>
+                      </select>
+                  </td>
+                  <td> वडा नं.
+                      <select name="pward" id="pward">
+                          <option>छान्नुहोस</option>
+                          <option>....</option>
+                          <option>१</option>
+                          <option>२</option>
+                          <option>३</option>
+                          <option>४</option>
+                          <option>५</option>
+                      </select>
+                  </td>
+                  <td> टोल <input type="text" name="ptol" id="ptol"></td>
+              </tr>
+          </tbody></table>
+      </div>
+  </div>
+</form>
+
+
+       <script src="./Docनजनument_files/jquery.min.js.download"></script>
+  <script src="./Docनजनument_files/script.js.download"></script>
+
+
+
+<script>
+  const formId = "save-later-form"; // ID of the form
+  const url = location.href; // href for the page
+  const formIdentifier = `${url} ${formId}`; // Identifier used to identify the form
+  const saveButton = document.querySelector("#save"); // select save button
+  const alertBox = document.querySelector(".alert"); // select alert display div
+  let form = document.querySelector(`#${formId}`); // select form
+  let formElements = form.elements; // get the elements in the form
+
+  // Function to save form data
+  const saveFormData = () => {
+    let data = { [formIdentifier]: {} };
+    for (const element of formElements) {
+      if (element.name.length > 0) {
+        if (element.tagName === "SELECT") {
+          data[formIdentifier][element.name] = element.value;
+        } else if (element.type === "text") {
+          data[formIdentifier][element.name] = element.value;
+        }
+      }
+    }
+    localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+    const message = "Form draft has been saved!";
+    displayAlert(message);
+  };
+
+  // Event handler for the "SAVE" button
+  saveButton.onclick = event => {
+    event.preventDefault();
+    saveFormData();
+  };
+
+  // Event listener for input fields and select elements
+  for (const element of formElements) {
+    if (element.type === "text" || element.tagName === "SELECT") {
+      element.addEventListener("change", saveFormData);
+      element.addEventListener("input", saveFormData); // Change "change" to "input" here
+    }
+  }
+
+  const displayAlert = message => {
+    alertBox.innerText = message;
+    alertBox.style.display = "block";
+    setTimeout(function () {
+      alertBox.style.display = "none";
+    }, 1000);
+  };
+
+  // Use window.onload to ensure the entire page is loaded before running the code
+  window.onload = populateForm;
+
+  function populateForm() {
+    if (localStorage.key(formIdentifier)) {
+      const savedData = JSON.parse(localStorage.getItem(formIdentifier));
+      for (const element of formElements) {
+        if (element.name in savedData) {
+          if (element.tagName === "SELECT") {
+            element.value = savedData[element.name];
+          } else if (element.type === "text") {
+            element.value = savedData[element.name];
+          }
+        }
+      }
+      const message = "Form has been refilled with saved data!";
+      displayAlert(message);
+    }
+  }
+</script>
+
+
+</body><!-- Your HTML code --></html>
